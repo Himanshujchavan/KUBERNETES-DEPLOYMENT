@@ -25,7 +25,12 @@ footwear-ecommerce/
 │   ├── server.js           # Main server file
 │   ├── .env                # Environment variables
 │   └── package.json        # Backend dependencies and scripts
-│
+|── k8s/
+│   ├── frontend-deployment.yaml
+│   ├── frontend-service.yaml
+│   ├── backend-deployment.yaml
+│   ├── backend-service.yaml
+│   
 └── README.md               # Project documentation
 ```
 
@@ -213,3 +218,124 @@ Open your browser and navigate to:
 ```plaintext
 http://localhost:3000
 ```
+
+
+Here is a clear, step-by-step guide to deploy your microservices-based footwear-ecommerce application on a Kubernetes cluster. This includes YAML configuration file creation, deployment steps, and what to include in the final deliverables.
+
+✅ Goal: Deploy a microservices app (frontend + backend) on Kubernetes and provide YAML files + documentation.
+
+───────────────────────────────
+🔧 STEP 1: Prepare Docker Images
+───────────────────────────────
+
+1. Go to your backend folder:
+
+   ```bash
+   cd backend
+   docker build -t your-dockerhub-username/backend:latest .
+   docker push your-dockerhub-username/backend:latest
+   ```
+
+2. Go to your frontend folder:
+
+   ```bash
+   cd ../frontend
+   docker build -t your-dockerhub-username/frontend:latest .
+   docker push your-dockerhub-username/frontend:latest
+   ```
+
+✅ Tip: Replace your-dockerhub-username with your actual Docker Hub username.
+
+───────────────────────────────
+📁 STEP 2: Create k8s/ Folder and YAML Files
+───────────────────────────────
+
+Inside your project root, create a folder named k8s/ and add the following files:
+
+📄 backend-deployment.yaml
+
+📄 backend-service.yaml
+
+📄 frontend-deployment.yaml
+
+📄 frontend-service.yaml
+
+───────────────────────────────
+🚀 STEP 3: Apply YAML Files
+───────────────────────────────
+
+1. Go to your project root or k8s/ folder:
+
+   ```bash
+   kubectl apply -f k8s/
+   ```
+
+2. Check deployments and services:
+
+   ```bash
+   kubectl get deployments
+   kubectl get pods
+   kubectl get services
+   ```
+
+───────────────────────────────
+🌍 STEP 4: Access the Application
+───────────────────────────────
+
+* If using minikube:
+
+  ```bash
+  minikube service frontend-service
+  ```
+
+* If using cloud Kubernetes:
+  Get the external IP:
+
+  ```bash
+  kubectl get svc frontend-service
+  ```
+
+───────────────────────────────
+📝 STEP 5: Create README.md for Documentation
+───────────────────────────────
+
+Sample content to include:
+
+# Footwear E-Commerce Kubernetes Deployment
+
+## Microservices Architecture
+
+* Frontend: HTML/CSS/JS
+* Backend: Node.js + Express
+* Deployed via Kubernetes with 4 YAML files
+
+## 🛠 Deployment Steps
+
+1. Build Docker images:
+
+   ```bash
+   docker build -t yourname/frontend:latest ./frontend
+   docker build -t yourname/backend:latest ./backend
+   docker push yourname/frontend:latest
+   docker push yourname/backend:latest
+   ```
+
+2. Apply Kubernetes configs:
+
+   ```bash
+   kubectl apply -f k8s/
+   ```
+
+3. Check deployments and services:
+
+   ```bash
+   kubectl get all
+   ```
+
+4. Access frontend:
+
+   * Cloud: via external IP
+   * Minikube: minikube service frontend-service
+
+---
+
