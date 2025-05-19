@@ -4,7 +4,7 @@
 
 **Company:** CODETECH IT SOLUTION
 
-**Intern:** Himanshu Jagannath Chavan
+**Intern:** Himanshu Jagannath chavan
 
 **Intern ID:** CT04DK145
 
