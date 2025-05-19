@@ -1,4 +1,18 @@
 # KUBERNETES DEPLOYMENT
+COMPANY : CODETECH IT SOLUTION
+
+NAME :Himanshu Jagannath Chavan
+
+Intern ID: CT04DK145
+
+Domain : DevOps
+
+Duration : 4 weeks
+
+Mentor : NEELA SANTOSH
+
+
+
 ## Footwear E-Commerce Application
 
 A complete e-commerce solution for footwear with separate frontend and backend components.
@@ -77,16 +91,18 @@ The backend is built with Node.js and Express, featuring:
 1. Clone the repository:
    \`\`\`
    git clone https://github.com/Himanshujchavan/KUBERNETES-DEPLOYMENT.git
+
+
    cd footwear-ecommerce
    \`\`\`
 
-2. Install backend dependencies:
+3. Install backend dependencies:
    \`\`\`
    cd backend
    npm install
    \`\`\`
 
-3. Configure environment variables:
+4. Configure environment variables:
    - Create a `.env` file in the backend directory
    - Add your JWT secret:
      \`\`\`
@@ -94,23 +110,23 @@ The backend is built with Node.js and Express, featuring:
      PORT=5000
      \`\`\`
 
-4. Start the backend server:
+5. Start the backend server:
    \`\`\`
    npm run dev
    \`\`\`
 
-5. In a new terminal, install frontend dependencies:
+6. In a new terminal, install frontend dependencies:
    \`\`\`
    cd ../frontend
    npm install
    \`\`\`
 
-6. Start the frontend server:
+7. Start the frontend server:
    \`\`\`
    npm start
    \`\`\`
 
-7. Open your browser and navigate to `http://localhost:3000`
+8. Open your browser and navigate to `http://localhost:3000`
 
 ## API Endpoints
 
