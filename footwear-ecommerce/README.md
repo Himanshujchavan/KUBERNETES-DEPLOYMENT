@@ -1,28 +1,37 @@
-# Footwear E-Commerce Application
+# KUBERNETES DEPLOYMENT
+## Footwear E-Commerce Application
 
 A complete e-commerce solution for footwear with separate frontend and backend components.
 
-## Project Structure
+---
 
-\`\`\`
-📁 footwear-ecommerce/
- ┣ 📁 frontend/
- ┃ ┣ 📁 css/
- ┃ ┣ 📁 js/
- ┃ ┃ ┣ 📁 components/
- ┃ ┃ ┣ 📁 pages/
- ┃ ┃ ┣ 📁 services/
- ┃ ┣ index.html
- ┃ ┗ package.json
- ┣ 📁 backend/
- ┃ ┣ 📁 controllers/
- ┃ ┣ 📁 routes/
- ┃ ┣ 📁 data/
- ┃ ┣ server.js
- ┃ ┣ .env
- ┃ ┗ package.json
- ┗ README.md
-\`\`\`
+## 📁 Project Structure – *Footwear E-commerce Platform*
+
+```
+footwear-ecommerce/
+├── frontend/                # Frontend application (HTML, CSS, JavaScript)
+│   ├── css/                # Stylesheets
+│   ├── js/                 # JavaScript logic
+│   │   ├── components/     # Reusable UI components
+│   │   ├── pages/          # Page-specific JS files
+│   │   └── services/       # API call utilities and services
+│   ├── index.html          # Entry point HTML file
+│   └── package.json        # Frontend dependencies and scripts
+│
+├── backend/                # Backend application (Node.js/Express)
+│   ├── controllers/        # Business logic and request handlers
+│   ├── routes/             # API route definitions
+│   ├── data/               # Static or mock data (optional DB seed)
+│   ├── server.js           # Main server file
+│   ├── .env                # Environment variables
+│   └── package.json        # Backend dependencies and scripts
+│
+└── README.md               # Project documentation
+```
+
+---
+
+
 
 ## Features
 
@@ -62,7 +71,7 @@ The backend is built with Node.js and Express, featuring:
 
 1. Clone the repository:
    \`\`\`
-   git clone https://github.com/yourusername/footwear-ecommerce.git
+   git clone https://github.com/Himanshujchavan/KUBERNETES-DEPLOYMENT.git
    cd footwear-ecommerce
    \`\`\`
 
@@ -76,7 +85,7 @@ The backend is built with Node.js and Express, featuring:
    - Create a `.env` file in the backend directory
    - Add your JWT secret:
      \`\`\`
-     JWT_SECRET=your-jwt-secret
+     JWT_SECRET=y28cdf075011d51b33d99da4b4ef2da187aa52363273ce4d0000714cbf9298b29afc55621b4af356a725532ca77ea2951a6556b290954ae89d24b888b74ba6e6e
      PORT=5000
      \`\`\`
 
